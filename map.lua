@@ -609,6 +609,8 @@ end
 
 
 function CodexMap:UpdateNodes()
+	print('***** CodexMap:UpdateNodes', date())
+	print(debugstack())
 	-- local worldMapId = C_Map.GetBestMapForUnit("player")
 	local i = 0
 

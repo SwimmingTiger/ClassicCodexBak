@@ -26,6 +26,7 @@ CodexQuest:RegisterEvent("NAME_PLATE_UNIT_ADDED")
 --CodexQuest:RegisterEvent("NAME_PLATE_UNIT_REMOVED")
 CodexQuest:RegisterEvent("ADDON_LOADED")
 CodexQuest:SetScript("OnEvent", function(self, event, ...)
+    if event ~= "ADDON_LOADED" and event ~= "NAME_PLATE_UNIT_ADDED" then print('----- CodexQuest:OnEvent', event, ...) end
     if event == "ADDON_LOADED" then
         arg1 = ...
         if arg1 == "ClassicCodex" then
